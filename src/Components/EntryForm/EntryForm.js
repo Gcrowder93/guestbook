@@ -1,12 +1,20 @@
 import React from 'react';
 
-export default function EntryForm({ name, entry, date, setName, setEntry, setDate, handleSubmit }) {
-  const [disable, setDisable] = React.useState(false);
-
+export default function EntryForm({
+  name,
+  guestEntry,
+  date,
+  setName,
+  setguestEntry,
+  setDate,
+  handleSubmit,
+}) {
   return (
     <div>
       <form>
-        <h3>Add an Entry</h3>
+        <h3>
+          Add an <mark>Entry</mark>
+        </h3>
         <div className="form-control">
           <label>Name:</label>
           <input
@@ -25,9 +33,9 @@ export default function EntryForm({ name, entry, date, setName, setEntry, setDat
             className="controls"
             type="text"
             placeholder="message"
-            value={entry}
+            value={guestEntry}
             onChange={(e) => {
-              setEntry(e.target.value);
+              setguestEntry(e.target.value);
             }}
           />
         </div>
@@ -47,14 +55,14 @@ export default function EntryForm({ name, entry, date, setName, setEntry, setDat
           <button
             className="button"
             setName={setName}
-            setEntry={setEntry}
+            setguestEntry={setguestEntry}
             setDate={setDate}
-            disabled={disable}
-            // onClick={() => setDisable(true)}
             onClick={handleSubmit}
           >
             Click to Submit
           </button>
+          {/* 
+          <button onClick={() => setUser('')}>{`Not ${user}?`}</button> */}
         </div>
       </form>
     </div>

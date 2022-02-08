@@ -1,3 +1,15 @@
+// import GuestBook from '../Components/GuestBook/GuestBook';
+
+// const Home = () => {
+//   return (
+//     <Entry>
+//       <GuestBook></GuestBook>
+//     </Entry>
+//   );
+// };
+
+// export default Home;
+
 // components - entryform, entrylist, guestbook, context
 
 // context - entrycontext, usercontext
