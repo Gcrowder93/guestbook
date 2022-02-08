@@ -3,9 +3,9 @@ import { createContext, useContext, useState } from 'react';
 const UserContext = createContext();
 
 export function UserProvider({ children }) {
-  const [user, setUser] = useState('');
-  const contextValue = { user, setUser };
-  <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
+  const [userInput, setUserInput] = useState('');
+  const contextValue = { userInput, setUserInput };
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 }
 
 export function useUser() {

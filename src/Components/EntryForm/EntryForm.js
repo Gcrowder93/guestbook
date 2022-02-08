@@ -10,8 +10,8 @@ export default function EntryForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUserInput(userInput);
-    setEntryText([...guestEntry, { entry: entryText, userInput }]);
+    setUserInput(userText);
+    setguestEntry([...guestEntry, { entry: entryText, userInput, id: guestEntry.length }]);
   };
 
   return (
@@ -40,9 +40,9 @@ export default function EntryForm() {
             className="controls"
             type="text"
             placeholder="Message"
-            value={guestEntry}
+            value={entryText}
             onChange={(e) => {
-              setguestEntry(e.target.value);
+              setEntryText(e.target.value);
             }}
           />
         </div>

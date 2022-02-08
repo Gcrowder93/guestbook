@@ -3,11 +3,10 @@ import EntryList from '../Components/EntryList/EntryList';
 
 const Home = () => {
   return (
-    <EntryForm>
-      <EntryList>
-        <Home />
-      </EntryList>
-    </EntryForm>
+    <>
+      <EntryForm></EntryForm>
+      <EntryList></EntryList>
+    </>
   );
 };
 

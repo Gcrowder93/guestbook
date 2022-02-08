@@ -2,13 +2,13 @@ import React from 'react';
 import { useEntry } from '../../Context/EntryContext';
 
 export default function EntryList() {
-  const { entries } = useEntry();
+  const { guestEntry } = useEntry();
   return (
     <>
-      {entries.map(({ id, message, user }) => (
+      {guestEntry.map(({ id, entry, userInput }) => (
         <div className="entry" key={id}>
-          <p>{message}</p>
-          <p>{user}</p>
+          <p>{entry}</p>
+          <p>{userInput}</p>
         </div>
       ))}
     </>
