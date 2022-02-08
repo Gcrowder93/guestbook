@@ -1,21 +1,17 @@
-// import { useContext, createContext, useState, useEffect } from 'react';
+import { useContext, createContext, useState } from 'react';
 
-// const EntryContext = createContext();
+const EntryContext = createContext();
 
-// function EntryProvider({ children }) {
-//   const [entry, setEntry] = useState([]);
-//   const contextValue = { entry, setEntry };
+export function EntryProvider({ children }) {
+  const [entry, setEntry] = useState(['']);
+  const contextValue = { entry, setEntry };
+  <EntryContext.Provider value={contextValue}>{children}</EntryContext.Provider>;
+}
 
-//   return <EntryContext.Provider value={contextValue}>{children}</EntryContext.Provider>;
-
-//   const useEntries = () => {
-//     const context = useContext(EntryContext);
-
-//     if (context === undefined) {
-//       throw new Error('useUser must be used within a UserProvider');
-//     }
-//     return context;
-//   };
-
-//   export { EntryProvider, useEntries };
-// }
+export function useEntry() {
+  const context = useContext(EntryContext);
+  if (context === undefined) {
+    throw new Error('error undefined error');
+  }
+  return context;
+}

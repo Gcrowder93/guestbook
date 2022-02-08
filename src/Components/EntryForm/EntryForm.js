@@ -1,46 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useUser } from '../../Context/UserContext';
+import { useEntry } from '../../Context/EntryContext';
 
-export default function EntryForm({
-  name,
-  guestEntry,
-  date,
-  setName,
-  setguestEntry,
-  setDate,
-  handleSubmit,
-}) {
+export default function EntryForm() {
+  const [userText, setUserText] = useState('');
+  const [entryText, setEntryText] = useState('');
+  const { userInput, setUserInput } = useUser();
+  const { guestEntry, setguestEntry } = useEntry();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setUserInput(userInput);
+    setEntryText([...guestEntry, { entry: entryText, userInput }]);
+  };
+
   return (
     <div>
       <form>
         <h3>
           Add an <mark>Entry</mark>
         </h3>
+        <hr width="20px"></hr>
         <div className="form-control">
-          <label>Name:</label>
+          <label>Name: </label>
           <input
             className="controls"
             type="text"
             placeholder="First Name"
-            value={name}
+            value={userText}
             onChange={(e) => {
-              setName(e.target.value);
+              setUserText(e.target.value);
             }}
           />
         </div>
+        <hr width="20px"></hr>
         <div className="form-control">
-          <label>Message to Others:</label>
+          <label>Entry: </label>
           <input
             className="controls"
             type="text"
-            placeholder="message"
+            placeholder="Message"
             value={guestEntry}
             onChange={(e) => {
               setguestEntry(e.target.value);
             }}
           />
         </div>
-        <div className="form-control">
-          <label>Date Submitted</label>
+        <hr width="20px"></hr>
+        {/* <div className="form-control">
+          <label>Date: </label>
           <input
             className="controls"
             type="text"
@@ -50,19 +58,22 @@ export default function EntryForm({
               setDate(e.target.value);
             }}
           />
-        </div>
+        </div> */}
         <div>
+          <hr width="20px"></hr>
           <button
             className="button"
-            setName={setName}
+            setName={setUserInput}
             setguestEntry={setguestEntry}
-            setDate={setDate}
+            // setDate={setDate}
             onClick={handleSubmit}
           >
             Click to Submit
           </button>
-          {/* 
-          <button onClick={() => setUser('')}>{`Not ${user}?`}</button> */}
+          <hr width="20px"></hr>
+          {/* this button below is for once you submit your name, and the name field goes away. This will have you able to 'log out'
+          currently, its letting me know that 'name' is undefined */}
+          {<button onClick={() => setUserInput('')}>{`Not ${userInput} ?`}</button>}
         </div>
       </form>
     </div>
