@@ -1,6 +1,8 @@
 import React from 'react';
 
 export default function EntryForm({ name, entry, date, setName, setEntry, setDate, handleSubmit }) {
+  const [disable, setDisable] = React.useState(false);
+
   return (
     <div>
       <form>
@@ -47,6 +49,8 @@ export default function EntryForm({ name, entry, date, setName, setEntry, setDat
             setName={setName}
             setEntry={setEntry}
             setDate={setDate}
+            disabled={disable}
+            // onClick={() => setDisable(true)}
             onClick={handleSubmit}
           >
             Click to Submit
