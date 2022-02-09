@@ -4,7 +4,8 @@ const EntryContext = createContext();
 
 export function EntryProvider({ children }) {
   const [guestEntry, setguestEntry] = useState([]);
-  const contextValue = { guestEntry, setguestEntry };
+  const [date, setDate] = useState([]);
+  const contextValue = { guestEntry, setguestEntry, date, setDate };
   return <EntryContext.Provider value={contextValue}>{children}</EntryContext.Provider>;
 }
 
