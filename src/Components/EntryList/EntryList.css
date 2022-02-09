@@ -1,0 +1,7 @@
+.card {
+  /* display: flex; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: large;
+  text-shadow: 1px 1px 1px darkred;
+}
