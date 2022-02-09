@@ -4,8 +4,8 @@ import EntryList from '../Components/EntryList/EntryList';
 const Home = () => {
   return (
     <>
-      <EntryForm></EntryForm>
-      <EntryList></EntryList>
+      <EntryForm />
+      <EntryList />
     </>
   );
 };
