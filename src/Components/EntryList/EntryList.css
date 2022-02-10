@@ -1,11 +1,16 @@
 .entry {
   display: inline-flex;
-  inline-size: 200px;
-  /* margin: auto; */
-  /* background-color: aqua; */
+  inline-size: 190px;
   font-size: large;
   text-shadow: 1px 1px 1px darkred;
-  border: 10px white;
+}
+
+.card {
+  background-color: indianred;
+  border-radius: 7%;
+  margin: auto;
+  width: 170px;
+  height: 150px;
 }
 
 .controls {

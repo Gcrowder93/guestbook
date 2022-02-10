@@ -1,0 +1,19 @@
+.form1 {
+  /* background-color: indianred; */
+  background-color: rgba(252, 132, 132, 0.753);
+  border-radius: 7%;
+  margin: auto;
+  width: 220px;
+  height: 195px;
+}
+
+.footer {
+  background-color: indianred;
+  position: absolute;
+  font-weight: bold;
+  text-decoration: underline 2px;
+  font-style: italic;
+  height: 25px;
+  width: 100%;
+  bottom: 0;
+}
