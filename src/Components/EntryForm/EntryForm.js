@@ -14,7 +14,10 @@ export default function EntryForm() {
     setIsDisabled(!isDisabled);
     e.preventDefault();
     setUserInput(userText);
-    setguestEntry([...guestEntry, { entry: entryText, userInput, date, id: guestEntry.length }]);
+    setguestEntry([
+      ...guestEntry,
+      { entry: userText, entryText, userInput, date, id: guestEntry.length },
+    ]);
   };
 
   const displayMessage = userInput
@@ -30,13 +33,13 @@ export default function EntryForm() {
         <hr width="20px"></hr>
         <div className="form-control">
           <label>
-            <mark>Name: </mark>
+            <label>Name: </label>
           </label>
 
           <input
             className="controls"
             type="text"
-            disabled={isDisabled}
+            // disabled={isDisabled}
             placeholder="First Name"
             value={userText}
             onChange={(e) => {
@@ -74,7 +77,7 @@ export default function EntryForm() {
         <div>
           <hr width="20px"></hr>
           <button
-            className="button"
+            className="button2"
             setUserInput={setUserInput}
             setguestEntry={setguestEntry}
             setDate={setDate}
@@ -83,7 +86,12 @@ export default function EntryForm() {
             Click to Submit
           </button>
           <hr width="20px"></hr>
-          {<button onClick={() => setUserInput('')}>{`Not ${userInput} ?`}</button>}
+          {
+            <button
+              className="button2"
+              onClick={() => setUserInput('')}
+            >{`Not ${userInput} ?`}</button>
+          }
         </div>
       </form>
     </div>
