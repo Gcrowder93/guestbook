@@ -24,7 +24,7 @@ export default function EntryForm() {
     : 'Please submit a message';
 
   return (
-    <div>
+    <div className="div">
       <form onSubmit={handleSubmit}></form>
       <h1>{displayMessage}</h1>
       <form>

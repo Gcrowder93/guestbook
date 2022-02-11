@@ -6,12 +6,12 @@
 }
 
 .card {
-  background-color: indianred;
+  background-color: rgba(252, 132, 132, 0.753);
   border-radius: 7%;
   margin: 10px;
   padding: 5px;
   width: 260px;
-  height: 150px;
+  height: 135px;
 }
 
 .name {
@@ -22,18 +22,6 @@
 .controls {
   border-radius: 5px;
 }
-
-/* .button2 {
-  border: 2px solid #d2bdff;
-  height: 40px;
-  width: 120px;
-  border-radius: 4px;
-  position: relative;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  margin: 15px;
-  background: white;
-} */
 
 .button2 {
   border: 5em;
