@@ -5,21 +5,20 @@ import './EntryList.css';
 export default function EntryList() {
   const { guestEntry } = useEntry();
   return (
-    <>
-      {guestEntry.map(({ id, entry, userInput, date }) => (
+    <div>
+      {guestEntry.map(({ id, userInput, entryText, date }) => (
         <div className="entry" key={id}>
           <div className="card">
             <ul>
               <span>
-                <p>{userInput}</p>
-                <p>{entry}</p>
+                <p className="name">by: {userInput}</p>
+                <p>{entryText}</p>
                 <a>{date}</a>
               </span>
-              <hr width="35px"></hr>
             </ul>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }

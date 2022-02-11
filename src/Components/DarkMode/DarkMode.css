@@ -7,13 +7,13 @@ body {
 }
 
 body.light-mode {
-  background-color: peachpuff;
+  background-color: rgb(255, 255, 176);
   color: #333;
   transition: background-color 0.3s ease;
 }
 
 body.dark-mode {
-  background-color: #061402;
+  background-color: #410613;
   color: #dfdfdf;
 }
 
@@ -24,18 +24,12 @@ body.navbar {
 body.dark-mode-toggle > button {
   color: #999;
 }
-/* body:last-child {
-  color: lightblue;
-} */
 
 .navbar {
-  /* position: fixed; */
   top: 0;
   width: 100%;
   display: flex;
   background-color: indianred;
-
-  /* padding: 5px; */
 }
 
 .content {
