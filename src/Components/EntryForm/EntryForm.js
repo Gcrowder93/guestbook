@@ -39,7 +39,6 @@ export default function EntryForm() {
             <input
               className="controls"
               type="text"
-              // disabled={isDisabled}
               placeholder="First Name"
               value={userText}
               onChange={(e) => {
