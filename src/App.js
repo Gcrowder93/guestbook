@@ -9,6 +9,7 @@ function App() {
         <DarkModeToggle />
       </div>
       <Home />
+      <footer className="footer">Created 02/10/2022</footer>
     </div>
   );
 }

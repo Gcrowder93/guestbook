@@ -1,6 +1,6 @@
 .entry {
   display: inline-flex;
-  inline-size: 190px;
+  inline-size: 300px;
   font-size: large;
   text-shadow: 1px 1px 1px darkred;
 }
@@ -8,9 +8,15 @@
 .card {
   background-color: indianred;
   border-radius: 7%;
-  margin: auto;
-  width: 170px;
+  margin: 10px;
+  padding: 5px;
+  width: 260px;
   height: 150px;
+}
+
+.name {
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .controls {

@@ -16,10 +16,7 @@ export default function EntryForm() {
     setIsDisabled(!isDisabled);
     e.preventDefault();
     setUserInput(userText);
-    setguestEntry([
-      ...guestEntry,
-      { entry: userText, entryText, userInput, date, id: guestEntry.length },
-    ]);
+    setguestEntry([...guestEntry, { entryText, userInput: userText, date, id: guestEntry.length }]);
   };
 
   const displayMessage = userInput
@@ -99,7 +96,6 @@ export default function EntryForm() {
         </div>
         <hr></hr>
       </form>
-      <footer className="footer">Choking Hazard</footer>
     </div>
   );
 }
