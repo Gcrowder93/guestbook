@@ -1,5 +1,8 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Views/Home';
+import Auth from './Views/Auth/Auth';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import DarkModeToggle from './Components/DarkMode/DarkModeToggle';
 
 function App() {
@@ -8,7 +11,16 @@ function App() {
       <div className="navbar">
         <DarkModeToggle />
       </div>
-      <Home />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/login">
+            <Auth />
+          </Route>
+          <PrivateRoute path="/">
+            <Home />
+          </PrivateRoute>
+        </Switch>
+      </BrowserRouter>
       <footer className="footer">Created 02/10/2022</footer>
     </div>
   );
