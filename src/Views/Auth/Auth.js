@@ -1,7 +1,6 @@
 import { useHistory, useLocation } from 'react-router-dom';
 import { useUser } from '../../Context/UserContext';
 import React, { useState } from 'react';
-import styles from './Auth.css';
 
 const Auth = () => {
   const { setUserInput } = useUser();
@@ -9,7 +8,6 @@ const Auth = () => {
   const [password, setPassword] = useState('');
   const location = useLocation();
   const history = useHistory();
-  const [error, setError] = useState(null);
 
   const handleSignIn = () => {
     if (email === process.env.REACT_APP_AUTH_USERNAME) setUserInput({ email });
@@ -17,7 +15,6 @@ const Auth = () => {
     setUserInput(email);
     const { from } = location.state || { from: { pathname: '/' } };
     history.replace(from.pathname);
-    // : setError('Unsuccessful, try again');
   };
 
   return (
@@ -49,7 +46,6 @@ const Auth = () => {
           Sign in as {email}
         </button>
       </form>
-      {error && <h4 className={styles.error}>{error}</h4>}
     </>
   );
 };
