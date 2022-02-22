@@ -3,12 +3,13 @@ import userEvent from '@testing-library/user-event';
 import App from './App';
 import { EntryProvider } from './Context/EntryContext';
 import { UserProvider } from './Context/UserContext';
+import Home from './Views/Home';
 
 test('renders learn react link', () => {
   render(
     <EntryProvider>
       <UserProvider>
-        <App />
+        <Home />
       </UserProvider>
     </EntryProvider>
   );
@@ -20,7 +21,7 @@ test('renders the actions', async () => {
   render(
     <EntryProvider>
       <UserProvider>
-        <App />
+        <Home />
       </UserProvider>
     </EntryProvider>
   );
