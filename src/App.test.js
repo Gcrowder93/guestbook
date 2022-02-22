@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from './App';
+// import App from './App';
 import { EntryProvider } from './Context/EntryContext';
 import { UserProvider } from './Context/UserContext';
 import Home from './Views/Home';
