@@ -4,6 +4,7 @@ import EntryList from '../Components/EntryList/EntryList';
 const Home = () => {
   return (
     <div>
+      {' '}
       <EntryForm />
       <EntryList />
     </div>
