@@ -4,7 +4,9 @@ const UserContext = createContext();
 
 export function UserProvider({ children }) {
   const [userInput, setUserInput] = useState('');
+
   const contextValue = { userInput, setUserInput };
+
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 }
 

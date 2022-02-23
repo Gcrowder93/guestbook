@@ -6,3 +6,21 @@ body {
 mark {
   background-color: indianred;
 }
+
+.App {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: rgba(219, 157, 157, 0.753);
+  font-weight: bold;
+  /* position: absolute; */
+  /* bottom: 0; */
+  text-decoration: underline 2px;
+  font-style: italic;
+  height: 25px;
+  width: 50%;
+  margin: auto;
+}

@@ -1,14 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from './App';
+// import App from './App';
 import { EntryProvider } from './Context/EntryContext';
 import { UserProvider } from './Context/UserContext';
+import Home from './Views/Home';
 
 test('renders learn react link', () => {
   render(
     <EntryProvider>
       <UserProvider>
-        <App />
+        <Home />
       </UserProvider>
     </EntryProvider>
   );
@@ -20,7 +21,7 @@ test('renders the actions', async () => {
   render(
     <EntryProvider>
       <UserProvider>
-        <App />
+        <Home />
       </UserProvider>
     </EntryProvider>
   );
@@ -31,6 +32,7 @@ test('renders the actions', async () => {
   userEvent.type(entryText, 'hello');
   userEvent.type(userInput, 'chase');
   userEvent.click(button);
-  const entry = await screen.findByText(/thanks for the message/i);
-  expect(entry).toBeInTheDocument();
+  const entry = await screen.findByText(/user/i);
+  // expect(entry).toBeInTheDocument();
+  expect(entry).toMatchSnapshot();
 });

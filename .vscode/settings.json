@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["setguest"]
+  "cSpell.words": ["setguest"],
+  "cSpell.ignoreWords": ["Authenticate", "reduxjs"]
 }
