@@ -32,6 +32,6 @@ test('renders the actions', async () => {
   userEvent.type(entryText, 'hello');
   userEvent.type(userInput, 'chase');
   userEvent.click(button);
-  const entry = await screen.findByText(/thanks for the message/i);
+  const entry = await screen.findByText(/user/i);
   expect(entry).toBeInTheDocument();
 });

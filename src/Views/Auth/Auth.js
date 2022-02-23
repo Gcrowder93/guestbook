@@ -21,7 +21,7 @@ const Auth = () => {
   return (
     <>
       <form className="form">
-        <h5>
+        <h3>
           Email:{' '}
           <i>
             <u>gcrowder93@gmail.com</u>
@@ -31,7 +31,7 @@ const Auth = () => {
           <i>
             <u>password</u>
           </i>
-        </h5>
+        </h3>
         {/* <div className="form"> */}
         <input
           className="inpute"
