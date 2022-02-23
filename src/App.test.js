@@ -33,5 +33,6 @@ test('renders the actions', async () => {
   userEvent.type(userInput, 'chase');
   userEvent.click(button);
   const entry = await screen.findByText(/user/i);
-  expect(entry).toBeInTheDocument();
+  // expect(entry).toBeInTheDocument();
+  expect(entry).toMatchSnapshot();
 });
