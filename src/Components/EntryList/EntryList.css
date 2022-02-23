@@ -1,4 +1,10 @@
 .entry {
+  /* display: grid; */
+  border: 2px dashed goldenrod;
+  width: 400px;
+  margin: 20px auto 10px;
+  padding: 5px 5px 20px;
+  text-align: left;
   display: inline-flex;
   inline-size: 300px;
   font-size: large;

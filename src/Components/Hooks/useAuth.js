@@ -8,9 +8,9 @@
 // export function useAuth() {
 //   const context = useContext(UserProvider);
 
-//   //   if (context === undefined) {
-//   //     throw new Error('useAuth must be used within a ProvideAuth context');
-//   //   }
+//   if (context === undefined) {
+//     throw new Error('useAuth must be used within a ProvideAuth context');
+//   }
 
 //   return context;
 // }

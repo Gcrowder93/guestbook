@@ -1,6 +1,7 @@
 import { useHistory, useLocation } from 'react-router-dom';
 import { useUser } from '../../Context/UserContext';
 import React, { useState } from 'react';
+import './Auth.css';
 
 const Auth = () => {
   const { setUserInput } = useUser();
@@ -19,14 +20,21 @@ const Auth = () => {
 
   return (
     <>
-      <form>
+      <form className="form">
         <h5>
-          Email: <i>gcrowder93@gmail.com</i>
+          Email:{' '}
+          <i>
+            <u>gcrowder93@gmail.com</u>
+          </i>
           <br></br>
-          Password: <i>password</i>
+          Password:{' '}
+          <i>
+            <u>password</u>
+          </i>
         </h5>
-
+        {/* <div className="form"> */}
         <input
+          className="inpute"
           htmlFor="email"
           type="email"
           value={email}
@@ -35,15 +43,17 @@ const Auth = () => {
         />
         <div>
           <input
+            className="inputp"
             htmlFor="password"
             type="password"
             value={password}
             placeholder="password"
             onChange={(event) => setPassword(event.target.value)}
           />
+          {/* </div> */}
         </div>
-        <button type="button" onClick={handleSignIn}>
-          Sign in as {email}
+        <button className="btn1" type="button" onClick={handleSignIn}>
+          Sign in
         </button>
       </form>
     </>

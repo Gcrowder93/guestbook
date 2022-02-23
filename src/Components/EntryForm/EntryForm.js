@@ -20,7 +20,8 @@ export default function EntryForm() {
   };
 
   const displayMessage = userInput
-    ? `Thanks for the message ${userInput}`
+    ? `user: ${userInput}
+    `
     : 'Please submit a message';
 
   return (

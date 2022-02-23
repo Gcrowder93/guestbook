@@ -21,7 +21,7 @@ function App() {
           </PrivateRoute>
         </Switch>
       </BrowserRouter>
-      <footer className="footer">Created 02/10/2022</footer>
+      {/* <footer className="footer">Created 02/10/2022</footer> */}
     </div>
   );
 }
